@@ -42,6 +42,8 @@ namespace COMP2084BeerStore
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            //swagger
+            services.AddSwaggerGen();
 
         }
 
@@ -76,6 +78,11 @@ namespace COMP2084BeerStore
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+            });
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Beer Store API");
             });
         }
     }
