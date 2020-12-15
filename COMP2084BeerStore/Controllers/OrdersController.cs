@@ -26,7 +26,11 @@ namespace COMP2084BeerStore.Controllers
         {
             return View(await _context.Orders.ToListAsync());
         }
-
+        // GET: Orders
+        public async Task<IActionResult> SalesReport()
+        {
+            return View("SalesReport");
+        }
         // GET: Orders/Details/5
         public async Task<IActionResult> Details(int? id)
         {
