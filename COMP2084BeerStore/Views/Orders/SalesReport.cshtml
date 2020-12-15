@@ -1,11 +1,16 @@
 ﻿@model COMP2084BeerStore.Models.Order
-@{ ViewData["Title"] = "    SalesReport";
+@{ ViewData["Title"] = "SalesReport";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
-<dl class="row">
-    <dt class="col-sm-2">
-        @Html.DisplayNameFor(model => model.Total)
-    </dt>
-    <dd class="col-sm-10">
-        @Html.DisplayFor(model => model.Total)
-    </dd>
-</dl>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
